@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import streamlit as st
 
-genai.configure(api_key="AIzaSyAT_DAZwPwKK21e2eSkZHc338ZapcIqpUU")
+genai.configure(api_key = st.secrets["api_key"])
 model = genai.GenerativeModel("gemini-pro")
 
 def get_email(age,gender,height,weight,fitness,exercise,diet):
